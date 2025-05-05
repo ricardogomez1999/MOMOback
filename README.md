@@ -1,4 +1,4 @@
-# 🍽️ Restaurant API (Node.js + TypeScript)
+# 🍽️ MOMO Mock API
 
 A mock REST API for managing a restaurant's menu, ingredients, and orders — built with **Express**, **TypeScript**, and **Zod**. Ideal for prototyping or presenting to partners (like Wansoft) before integrating with real APIs or databases.
 
