@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const ingredientController_1 = require("../controllers/ingredientController");
+const validate_1 = require("../middleware/validate");
+const ingredientSchema_1 = require("../schemas/ingredientSchema");
+const router = (0, express_1.Router)();
+router.get("/", ingredientController_1.getAllIngredients);
+router.get("/:id", ingredientController_1.getIngredientById);
+router.post("/", (0, validate_1.validate)(ingredientSchema_1.ingredientSchema), ingredientController_1.createIngredient);
+router.put("/:id", (0, validate_1.validate)(ingredientSchema_1.ingredientSchema.partial()), ingredientController_1.updateIngredient);
+router.delete("/:id", ingredientController_1.deleteIngredient);
+exports.default = router;
